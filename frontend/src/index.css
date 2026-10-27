@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+	font-family: 'DM Sans', sans-serif;
+	color: #172033;
+	background: #f6f8fb;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	/* Scale up the base root font size slightly so that ALL rem-based sizing globally increases, 
+	   making the interface more legible without breaking layouts */
+	font-size: 104%; 
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background: #f6f8fb;
+	/* Add antialiasing and bump base font weight to make text crisp and highly visible */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 500;
+	letter-spacing: 0.01em;
+}
+
+/* Enhance contrast for traditionally lighter text classes globally */
+.text-gray-500, .text-slate-500 {
+    color: #4b5563 !important;
+}
+.text-gray-400, .text-slate-400 {
+    color: #6b7280 !important;
+}
+.text-sm {
+	font-size: 0.925rem !important;
+}
+.text-xs {
+	font-size: 0.825rem !important;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+button,
+a {
+	-webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+select,
+input[type="file"],
+[role="button"] {
+	cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+	cursor: not-allowed;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	outline: 3px solid rgba(37, 99, 235, 0.35);
+	outline-offset: 2px;
+}
+
+::selection {
+	color: #fff;
+	background: #2563eb;
+}
+
+.uniform-card {
+	min-height: 360px;
+	display: flex;
+	flex-direction: column;
+}
+
+.uniform-card-media {
+	height: 148px;
+	min-height: 148px;
+}
+
+.uniform-card-body {
+	min-height: 212px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.student-card {
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 640px) {
+	.uniform-card {
+		min-height: 360px;
+	}
+}
+
